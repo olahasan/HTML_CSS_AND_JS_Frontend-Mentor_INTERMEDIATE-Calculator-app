@@ -1,0 +1,339 @@
+/* start Variables */
+:root{
+
+    /* #Theme 1 */
+
+    /* #Backgrounds */
+    
+    /* (main background) */
+    --Very-dark-desaturated-blue-main : hsl(222, 26%, 31%);
+    /* (toggle background, keypad background) */
+    --Very-dark-desaturated-blue-toggle : hsl(223, 31%, 20%);
+    /* (screen background) */
+    --Very-dark-desaturated-blue-screen : hsl(224, 36%, 15%);
+
+
+    
+    /* #Keys */
+    
+    /* (key background) */
+    --Desaturated-dark-blue-key : hsl(225, 21%, 49%);
+    /* (key shadow) */
+    --Desaturated-dark-blue : hsl(224, 28%, 35%);
+    /* (key background, toggle) */
+    --Red : hsl(6, 63%, 50%);
+    /* (key shadow) */
+    --Dark-red : hsl(6, 70%, 34%);
+    /* (key background) */
+    --Light-grayish-orange : hsl(30, 25%, 89%);
+    /* (key shadow) */
+    --Grayish-orange : hsl(28, 16%, 65%);
+    
+    /* #Text */
+    
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0, 100%);
+    
+
+
+    
+    /* ##Theme 2 */
+    
+    /* ##Backgrounds */
+    
+    /* (main background) */
+    --Light-gray : hsl(0, 0%, 90%);
+    /* (toggle background, keypad background) */
+    --Grayish-red : hsl(0, 5%, 81%);
+    /* (screen background) */
+    --Very-light-gray : hsl(0, 0%, 93%);
+    
+    /* ##Keys */
+    
+    /* (key background) */
+    --Dark-moderate-cyan : hsl(185, 42%, 37%);
+    /* (key shadow) */
+    --Very-dark-cyan : hsl(185, 58%, 25%);
+    /* (key background, toggle) */
+    --Orange : hsl(25, 98%, 40%);
+    /* (key shadow) */
+    --Dark-orange : hsl(25, 99%, 27%);
+    /* (key background) */
+    --Light-grayish-yellow : hsl(45, 7%, 89%);
+    /* (key shadow) */
+    --Dark-grayish-orange : hsl(35, 11%, 61%);
+    
+    /* ##Text */
+    
+    --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    /* (text) */
+    --White : hsl(0, 0, 100%);
+    
+
+
+    
+    /* ###Theme 3 */
+    
+    /* ### Backgrounds */
+    
+    /* (main background) */
+    --Very-dark-violet-main : hsl(268, 75%, 9%);
+    /* (toggle background, keypad background, screen background) */
+    --Very-dark-violet-o : hsl(268, 71%, 12%);
+    
+    /* ###Keys */
+    
+    /* (key background) */
+    --Dark-violet : hsl(281, 89%, 26%);
+    /* (key shadow) */
+    --Vivid-magenta : hsl(285, 91%, 52%);
+    /* (key background, toggle) */
+    --Pure-cyan : hsl(176, 100%, 44%);
+    /* (key shadow) */
+    --Soft-cyan : hsl(177, 92%, 70%);
+    /* (key background) */
+    --Very-dark-violet : hsl(268, 47%, 21%);
+    /* (key shadow) */
+    --Dark-magenta : hsl(290, 70%, 36%);
+    
+    /* ###Text */
+    
+    --Light-yellow: hsl(52, 100%, 62%);
+    --Very-dark-blue: hsl(198, 20%, 13%);
+    /* (text) */
+    --White : hsl(0, 0, 100%);
+
+}
+/* End Variables */
+
+
+
+/* Start Global Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--Desaturated-dark-blue);
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+      /* width: 500px; */
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+      /* width: 500px; */
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+
+
+  .all {
+    margin: 30px 0;
+}
+
+/* header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: var(--Very-light-gray);
+}
+  header .right {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+  header .right .word {
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+  header .right .change .bullets {
+    display: flex;
+    background-color: var( --Very-dark-desaturated-blue-toggle);
+    border-radius: 20px;
+    padding: 1px 2px;
+    width: 53px;
+}
+  header .right .change .bullets span {
+    width: 15px;
+    height: 15px;
+    background-color: var(--Red);
+    display: block;
+    border-radius: 50%;
+}
+  header .right .change .nums {
+   cursor: pointer;
+}
+  header .right .change .nums span:not(:last-child){
+    margin: 5px;
+}
+/* header */
+
+/* show */
+.show {
+    border-radius: 10px;
+    width: 100%;
+    background-color: var(--Very-dark-desaturated-blue-screen);
+    color: var(--Very-light-gray);
+    padding: 20px;
+    font-size: 50px;
+    text-align: end;
+    margin-top: 20px;
+    min-height: 86px;
+    overflow: hidden;
+}
+/* show */
+
+/* section */
+section {
+    background-color: var( --Very-dark-desaturated-blue-toggle);
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+
+}
+section  div{
+  background-color: var(--Light-gray);
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 3px 0 0 var(--Dark-grayish-orange);
+  color: var(--Very-dark-grayish-blue);
+  cursor: pointer;
+}
+section  div.de{
+  color: white;
+    background-color: hsl(223deg 28% 35%);
+    box-shadow: 0 3px 0 0 hsl(224deg 28% 35% / 58%);
+}
+section  div.re{
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-row-end: 5;
+  grid-column-end: 3;
+  color: white;
+  background-color: hsl(223deg 28% 35%);
+    box-shadow: 0 3px 0 0 hsl(224deg 28% 35% / 58%);
+}
+section  div.eq{
+    grid-row-start: 5;
+    grid-column-start: 3;
+    grid-row-end: 5;
+    grid-column-end: 5;
+    color: white;
+    background-color: var(--Red);
+    box-shadow: 0 3px 0 0 var(--Dark-red);
+}
+
+
+/* section */
+
+@media (max-width: 199px) {
+   
+    header .right {
+        flex-direction: column-reverse;
+    }
+    header .right .word {
+        margin-right: 3px;
+        margin-top: 6px;
+    }
+    .show {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: end;
+        margin-top: 10px;
+        overflow: hidden;
+
+    }
+    section {
+        border-radius: 2px;
+        margin-top: 15px;
+        padding: 6px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+        gap: 5px;
+    }
+    section div {
+        border-radius: 3px;
+        font-size: 10px;
+        text-align: center;
+        padding: 2px;
+    }
+  }
+@media (min-width: 200px) and (max-width: 374px){
+    section {
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+
+        border-radius: 10px;
+        margin-top: 15px;
+        padding: 8px;
+        display: grid;
+        gap: 8px;    
+    }
+    section div {
+        border-radius: 10px;
+        font-size: 10px;
+        text-align: center;
+        padding: 5px;
+    }
+    .show {
+        font-size: 16px;
+        overflow: hidden;
+    }
+  } 
+
+@media (min-width: 375px) and (max-width: 767px) {
+    .container {
+        width: 350px;
+    }
+    section {
+        border-radius: 10px;
+        margin-top: 15px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: 10px;
+    }
+  }
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 500px;
+    }
+  }
+@media (min-width: 992px) {
+    .container {
+          width: 500px;
+    }
+  }
+
+
+
+
+ 
